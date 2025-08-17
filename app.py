@@ -20,6 +20,13 @@ app.mount("/static", StaticFiles(directory="static"), name="static")
 templates = Jinja2Templates(directory="templates")
 
 
+from fastapi.responses import RedirectResponse
+
+@app.get("/")
+def root():
+    return RedirectResponse(url="/book")
+
+
 @app.get("/book", response_class=HTMLResponse)
 def index(request: Request):
     # Prepare a list of dictionaries for all books

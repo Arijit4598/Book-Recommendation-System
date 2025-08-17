@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>📚 Book Recommendation System</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <header>
+    <h1>📚 Book Recommendation System</h1>
+  </header>
+
+  <main>
+    <!-- Popular Books Section -->
+    <section id="popular">
+      <h2>🔥 Popular Books</h2>
+      <div class="book-grid">
+        {% for book in books_data %}
+        <div class="book-card">
+          <img src="{{ book.image }}" alt="{{ book.book_name }}">
+          <h3>{{ book.book_name }}</h3>
+          <p>{{ book.author }}</p>
+          <p>⭐ {{ book.rating|round(1) }} | 🗳 {{ book.votes }}</p>
+        </div>
+        {% endfor %}
+      </div>
+    </section>
+
+    <section id="recom">
+      <a href="/recommend">
+        <button>🔎 Find Similar Books</button>
+      </a>
+    </section>
+  </main>
+</body>
+</html>
