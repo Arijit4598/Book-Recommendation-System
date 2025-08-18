@@ -26,10 +26,9 @@ This system helps users discover new books tailored to their interests.
 
 ## 📂 Project Structure
 - Book-Recommendation-System/
-- ├── data/ # Dataset (books.csv, ratings.csv, etc.)
-- ├── notebooks/ # Jupyter notebooks for EDA and experiments
-- ├── app/
-- │ ├── main.py # FastAPI app entrypoint
-- │ ├── model.pkl # (Optional) Precomputed similarity matrix
+- ├── # Dataset (books.csv, ratings.csv, etc.)
+- ├── # Jupyter notebooks for EDA and experiments
+- │── main.py # FastAPI app entrypoint
+- │── model.pkl # (Optional) Precomputed similarity matrix
 - ├── requirements.txt # Dependencies
 - └── README.md # Documentation
